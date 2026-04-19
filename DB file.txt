@@ -8,8 +8,6 @@ create table if not exists resources(
      capacity int
      );
 
-
-
 create table if not exists bookings(
     id int auto_increment primary key,
     resource_id int,
