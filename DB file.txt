@@ -1,4 +1,5 @@
  create database if not exists resource_db;
+ 
  use resource_db;
 
 create table if not exists resources(
