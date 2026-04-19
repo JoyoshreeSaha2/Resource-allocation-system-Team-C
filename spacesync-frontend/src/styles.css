@@ -1,0 +1,192 @@
+:root {
+  --cherry-blossom: #edafb8ff;
+  --powder-petal: #f7e1d7ff;
+  --dust-grey: #dedbd2ff;
+  --ash-grey: #b0c4b1ff;
+  --iron-grey: #4a5759ff;
+}
+
+/* BODY */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, var(--powder-petal), #fff);
+  color: var(--iron-grey);
+}
+
+/* HEADER (dramatic glow + gradient + shadow) */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(
+    135deg,
+    var(--cherry-blossom),
+    var(--ash-grey),
+    var(--iron-grey)
+  );
+  color: white;
+  text-align: center;
+  padding: 22px;
+  z-index: 1000;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  animation: slideDown 0.6s ease;
+}
+
+/* Title BIG + glow */
+.title {
+  font-size: 38px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+/* Subtitle softer */
+.subtitle {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* FOOTER (glass effect) */
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgba(74, 87, 89, 0.95);
+  color: white;
+  text-align: center;
+  padding: 12px;
+  backdrop-filter: blur(8px);
+}
+
+/* PAGE spacing */
+.page {
+  padding-top: 140px;
+  padding-bottom: 90px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 18px;
+  padding: 10px;
+}
+
+/* CARD (floating effect) */
+.card {
+  background: white;
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid var(--dust-grey);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* BUTTONS (gradient + glow) */
+button {
+  background: linear-gradient(135deg, var(--iron-grey), var(--ash-grey));
+  color: white;
+  padding: 9px 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.25s ease;
+  font-weight: 600;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* CANCEL BUTTON (danger glow) */
+.cancel-btn {
+  background: linear-gradient(135deg, #ff4d4d, #c0392b);
+}
+
+/* FORM (glass card style) */
+.form-container {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 18px;
+  margin: 25px auto;
+  border-radius: 14px;
+  max-width: 420px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* INPUTS */
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid var(--dust-grey);
+  outline: none;
+}
+
+input:focus {
+  border-color: var(--cherry-blossom);
+  box-shadow: 0 0 8px rgba(237, 175, 184, 0.5);
+}
+
+/* TABLE (clean glass style) */
+table {
+  width: 100%;
+  margin-top: 20px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+th {
+  background: linear-gradient(135deg, var(--ash-grey), var(--iron-grey));
+  color: white;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid var(--dust-grey);
+}
+
+/* SUCCESS TEXT */
+.success {
+  color: #2ecc71;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* SCHEDULE WRAPPER */
+.schedule-wrapper {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.schedule-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--iron-grey);
+  margin-bottom: 15px;
+}
+
+/* ANIMATION */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
